@@ -35,7 +35,13 @@
         </nav>
     </header>
     <main>
-        <table>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nimi</th>
+                    <th scope="col">Ikä</th>
+                </tr>
+            </thead>
             <% users.forEach(function(user){ %>
                 <% if (user.name !="John" ) { %>
 
@@ -55,7 +61,7 @@
         </div>
     </main>
     <footer>
-        <p class="text-center text-muted">© Copyright 2014 The Awesome People</p>
+        <p class="text-center text-muted">© Copyright 2022 The Awesome People</p>
     </footer>
 </body>
 
