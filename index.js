@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var EJS = require('ejs');
 app.engine('html', EJS.renderFile);
+const PORT = process.env.PORT || 5000;
 
 // otetaan EJS käyttöön
 app.set("view engine", "ejs");
@@ -20,7 +21,7 @@ app.get("/", function (req, res) {
 // about page
 app.get("/about", function (req, res) {
     res.render("pages/about", {
-        new_heading: "This was passed from the JS file",
+        new_heading: "This was passed from the server",
         new_paragraph: __dirname,
         new_footer: "Here is the new footer"
     });
@@ -30,8 +31,10 @@ app.get("/about", function (req, res) {
 var seconddata = [
 
     { name: 'John', age: 25 },
-    { name: 'Mike', age: 42 },
-    { name: 'Samantha', age: 51 }
+    { name: 'Sanna', age: 19 },
+    { name: 'Sauli', age: 71 },
+    { name: 'Iivo', age: 34 },
+    { name: 'Kerttu', age: 29 }
 ];
 
 app.get('/users', function (req, res) {
@@ -39,6 +42,6 @@ app.get('/users', function (req, res) {
 });
 
 
-app.listen(8081);
+app.listen(PORT);
 console.log("8081 is the magic port");
 
