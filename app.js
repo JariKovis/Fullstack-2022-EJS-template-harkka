@@ -1,15 +1,13 @@
 var express = require("express");
 var app = express();
 var path = require('path');
-var EJS = require('ejs');
-app.engine('html', EJS.renderFile);
 const PORT = process.env.PORT || 5000;
-
+app.use(express.static('public'));
 // otetaan EJS käyttöön
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static('public'));
+
 
 // Tällä pakotetaan sivupohja tuottamaan sisennettyä, kaunista HTML:ää. Tuotantokäytössä asetus voi olla false jolloin sivujen koko pienenee hieman
 app.locals.pretty = true;
@@ -43,5 +41,5 @@ app.get('/users', function (req, res) {
 
 
 app.listen(PORT);
-console.log("8081 is the magic port");
+console.log(PORT + " is the magic port");
 

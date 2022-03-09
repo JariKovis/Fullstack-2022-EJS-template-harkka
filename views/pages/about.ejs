@@ -9,9 +9,6 @@
     <!-- CSS (load bootstrap from a CDN) -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-    <!-- huomaa, että staattista sisältöä (esim. css, js ja kuvat) voidaan hakea vain jos se on sallittu node.js serverin toimesta -->
-    <!-- eli koodissa pitää olla komento: app.use(express.static('public')); -->
-
     <!-- HUOM! Bootstrapin vanha versio jyrää omat tyylit, eli ne eivät näy vaikka tulevat liitetyksi mukaan -->
     <link rel="stylesheet" type="text/css" href="css/testi.css" />
     <style>
@@ -23,12 +20,12 @@
 
 <body class="container">
     <header>
-        <nav class="navbar navbar-default" role="navigation">
+        <!--         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
                         <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
-                        EJS Is Fun
+                        EJS
                     </a>
                 </div>
                 <ul class="nav navbar-nav">
@@ -37,7 +34,8 @@
                     <li><a href="/users">Users</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
+        <%- include('../partials/header') %>
     </header>
     <main>
         <div class="jumbotron">
