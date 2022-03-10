@@ -32,7 +32,8 @@ var seconddata = [
     { name: 'Sanna', age: 19 },
     { name: 'Sauli', age: 71 },
     { name: 'Iivo', age: 34 },
-    { name: 'Kerttu', age: 29 }
+    { name: 'Kerttu', age: 29 },
+    { name: 'John', age: 55 }
 ];
 
 app.get('/users', function (req, res) {
