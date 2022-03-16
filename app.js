@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 
-// Tällä pakotetaan sivupohja tuottamaan sisennettyä, kaunista HTML:ää. Tuotantokäytössä asetus voi olla false jolloin sivujen koko pienenee hieman
+/* Tällä pakotetaan sivupohja tuottamaan sisennettyä, kaunista HTML:ää. Tuotantokäytössä asetus voi olla false jolloin sivujen koko pienenee hieman */
 app.locals.pretty = true;
 
 app.get("/", function (req, res) {
